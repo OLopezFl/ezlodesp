@@ -1,0 +1,218 @@
+.faq {
+  overflow-x: hidden;
+  background: #f5f7f3;
+}
+
+.faq-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+  background:
+    linear-gradient(110deg, rgba(6, 16, 10, 0.74) 0%, rgba(8, 21, 13, 0.62) 55%, rgba(8, 21, 13, 0.78) 100%),
+    url('/images/lobby-main.jpg') center center / cover no-repeat;
+  margin-top: 0;
+  padding: calc(5rem + 76px) 0 4rem;
+  text-align: left;
+}
+
+.faq-hero-content h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.faq-hero-content p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 1.75;
+}
+
+.faq-intro {
+  background: #f5f7f3;
+  padding: 2.4rem 0 2rem;
+}
+
+.faq-intro .section-tag {
+  margin-bottom: 1rem;
+}
+
+.faq-intro h2 {
+  margin: 0;
+  color: #0f2d1a;
+  font-size: clamp(1.95rem, 4vw, 3.1rem);
+  line-height: 1.15;
+  font-weight: 700;
+  margin-top: 0.8rem;
+}
+
+.faq-lead {
+  margin-top: 1.6rem;
+  max-width: 75ch;
+  color: #475569;
+  font-size: 1.07rem;
+  line-height: 1.75;
+}
+
+.faq-items-section {
+  background: #f5f7f3;
+  padding: 3.2rem 0 4rem;
+}
+
+.faq-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 2.2rem;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1.2px solid rgba(47, 125, 79, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.faq-item:hover,
+.faq-item.expanded {
+  box-shadow: 0 8px 16px rgba(47, 125, 79, 0.1);
+  border-color: rgba(47, 125, 79, 0.24);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.4rem;
+  background: transparent;
+  border: none;
+  color: #0f2d1a;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: color 220ms ease;
+}
+
+.faq-question:hover {
+  color: #2f7d4f;
+}
+
+.faq-question-text {
+  flex: 1;
+}
+
+.faq-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: #2f7d4f;
+  transition: transform 220ms ease;
+  flex-shrink: 0;
+}
+
+.faq-item.expanded .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 320ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item.expanded .faq-answer {
+  max-height: 500px;
+}
+
+.faq-answer p {
+  margin: 0;
+  padding: 0 1.4rem 1.4rem;
+  color: #475569;
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.faq-cta {
+  background: #ffffff;
+  padding: 4rem 0 4.2rem;
+}
+
+.faq-cta-inner {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1.2px solid rgba(47, 125, 79, 0.12);
+  padding: 2rem 1.6rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(15, 45, 26, 0.07);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.faq-cta-inner:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(15, 45, 26, 0.1);
+  border-color: #2f7d4f;
+}
+
+.faq-cta-inner h2 {
+  color: #0f2d1a;
+  font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+  margin: 0;
+}
+
+.faq-cta-inner p {
+  margin: 0.9rem auto 1.5rem;
+  color: #475569;
+  max-width: 60ch;
+  font-size: 1.03rem;
+  line-height: 1.7;
+}
+
+.faq-cta-inner .btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  border-radius: 999px;
+  padding: 0.8rem 1.5rem;
+  background: #2f7d4f;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.97rem;
+  transition: transform 220ms ease, background-color 220ms ease, box-shadow 220ms ease;
+  border: none;
+}
+
+.faq-cta-inner .btn-secondary:hover {
+  background: #1f5233;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(35, 90, 56, 0.28);
+}
+
+@media (max-width: 700px) {
+  .faq-hero {
+    margin-top: 0;
+    padding: 3.4rem 0 2rem;
+  }
+
+  .faq-items {
+    gap: 1rem;
+  }
+
+  .faq-question {
+    padding: 1.2rem;
+  }
+
+  .faq-answer p {
+    padding: 0 1.2rem 1.2rem;
+  }
+}
