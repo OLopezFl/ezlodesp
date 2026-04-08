@@ -140,12 +140,20 @@
 }
 
 @media (max-width: 768px) {
+  .login {
+    padding: 1.4rem 0.9rem;
+  }
+
   .login-container {
     max-width: 100%;
   }
 
   .login-card {
-    padding: 2rem;
+    padding: 1.8rem 1.2rem;
+  }
+
+  .login-logo {
+    width: 160px;
   }
 
   .login-header h1 {
@@ -159,15 +167,15 @@
 
 @media (max-width: 480px) {
   .login {
-    padding: 1rem;
+    padding: 1rem 0.7rem;
   }
 
   .login-card {
-    padding: 1.5rem;
+    padding: 1.3rem 0.9rem;
   }
 
   .login-logo {
-    width: 130px;
+    width: 140px;
   }
 
   .login-header h1 {

@@ -233,19 +233,55 @@
 @media (max-width: 768px) {
   .services-hero {
     margin-top: 0;
-    padding: 3.4rem 0 3rem;
+    min-height: 480px;
+    padding: calc(3.1rem + 72px) 0 2.6rem;
   }
 
   .services-hero-content h1 {
     font-size: 1.8rem;
   }
 
+  .services-hero-content p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+
   .services-grid {
     grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .services-grid-section {
+    padding: 2.5rem 0 3.2rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.06rem;
+  }
+
+  .service-card p {
+    font-size: 0.93rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .service-link {
+    margin-bottom: 1rem;
+  }
+
+  .cta-section {
+    padding: 0.2rem 0 3.2rem;
+  }
+
+  .cta-content {
+    padding: 1.5rem 1rem;
   }
 
   .cta-content h2 {
     font-size: 1.5rem;
+  }
+
+  .services-cta-btn {
+    width: 100%;
   }
 }
 
