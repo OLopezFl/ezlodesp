@@ -42,6 +42,7 @@
   line-height: 1.04;
   color: #ffffff;
   font-weight: 700;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .hero-text h1 span {
@@ -132,6 +133,7 @@
   font-size: clamp(1.95rem, 4vw, 3.1rem);
   line-height: 1.15;
   font-weight: 700;
+  max-width: 18ch;
 }
 
 .features-grid {
@@ -142,9 +144,9 @@
 }
 
 .feature-card {
-  background: #f7fbf8;
+  background: linear-gradient(180deg, #f9fcfa 0%, #f4f8f5 100%);
   border: 1.2px solid rgba(47, 125, 79, 0.16);
-  border-radius: 14px;
+  border-radius: 16px;
   padding: 0;
   overflow: hidden;
   transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
@@ -279,8 +281,8 @@
 }
 
 .home-cta-inner {
-  background: #ffffff;
-  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdfb 100%);
+  border-radius: 18px;
   border: 1.2px solid #d9e0d7;
   padding: 2rem 1.6rem;
   text-align: center;

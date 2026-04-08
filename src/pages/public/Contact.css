@@ -37,7 +37,7 @@
   letter-spacing: -0.02em;
   line-height: 1.04;
   color: #ffffff;
-  text-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
+  text-shadow: 0 12px 30px rgba(0, 0, 0, 0.24);
 }
 
 .contact-hero p {
@@ -64,9 +64,9 @@
 }
 
 .contact-form {
-  background: #ffffff;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdfb 100%);
   border: 1px solid rgba(47, 125, 79, 0.12);
-  border-radius: 18px;
+  border-radius: 20px;
   padding: 2.4rem;
   box-shadow: 0 8px 20px rgba(15, 45, 26, 0.07);
 }
@@ -185,9 +185,9 @@
 }
 
 .info-card {
-  background: #ffffff;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdfb 100%);
   border: 1px solid rgba(47, 125, 79, 0.12);
-  border-radius: 18px;
+  border-radius: 20px;
   padding: 2.2rem;
   box-shadow: 0 8px 20px rgba(15, 45, 26, 0.07);
   transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
@@ -240,7 +240,7 @@
 
 .contact-form,
 .info-card {
-  animation: smoothReveal 360ms ease both;
+  animation: smoothReveal 220ms ease-out both;
 }
 
 .contact-form:hover,
@@ -253,11 +253,9 @@
 @keyframes smoothReveal {
   from {
     opacity: 0;
-    transform: translateY(12px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 

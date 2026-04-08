@@ -1,9 +1,9 @@
 .footer {
-  background: #ffffff;
+  background: linear-gradient(180deg, #ffffff 0%, #f8faf7 100%);
   color: #334155;
-  padding: 3.2rem 2rem 1.6rem;
+  padding: 3rem 2rem 1.8rem;
   margin-top: 0;
-  border-top: 1.2px solid #e5e7eb;
+  border-top: 1px solid rgba(47, 125, 79, 0.14);
 }
 
 .footer-content {
@@ -24,7 +24,7 @@
 .footer-title {
   margin: 0;
   color: #0f2d1a;
-  font-size: 1.3rem;
+  font-size: 1.22rem;
   line-height: 1.2;
   letter-spacing: -0.01em;
   font-weight: 700;

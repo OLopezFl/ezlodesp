@@ -3,6 +3,7 @@
   --bg-dark: #edece8;
   --surface: #ffffff;
   --surface-soft: #fafaf8;
+  --surface-elevated: #fcfdfb;
   --text: #152117;
   --text-secondary: #526455;
   --accent: #2f7d4f;
@@ -10,6 +11,7 @@
   --accent-light: #86efac;
   --border: #d9e0d7;
   --border-dark: #c8d0c6;
+  --radius-card: 16px;
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -36,9 +38,15 @@ body {
   margin: 0;
   font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color: var(--text);
-  background: var(--bg);
-  line-height: 1.5;
+  background: radial-gradient(circle at 80% -10%, #f1f7ef 0%, var(--bg) 48%);
+  line-height: 1.55;
   text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+::selection {
+  background: rgba(47, 125, 79, 0.22);
+  color: #0f2d1a;
 }
 
 .public-layout {
@@ -50,12 +58,14 @@ body {
 .public-main {
   flex: 1;
   position: relative;
+  overflow-x: clip;
 }
 
 .route-transition {
   position: relative;
   min-height: 100%;
   width: 100%;
+  overflow-x: clip;
 }
 
 .route-transition.route-exit {
@@ -70,27 +80,22 @@ body {
 .route-transition.route-enter .services-page > section:not(.services-hero),
 .route-transition.route-enter .faq > section:not(.faq-hero),
 .route-transition.route-enter .contact-page > section:not(.contact-hero) {
-  animation: none;
-}
-
-.route-transition.route-enter .home > section:not(.hero-section):nth-of-type(2),
-.route-transition.route-enter .services-page > section:not(.services-hero):nth-of-type(2),
-.route-transition.route-enter .faq > section:not(.faq-hero):nth-of-type(2),
-.route-transition.route-enter .contact-page > section:not(.contact-hero):nth-of-type(2) {
-  animation: contentReveal 360ms cubic-bezier(0.4, 0, 0.2, 1) both;
-}
-
-.route-transition.route-enter .home > section:not(.hero-section):nth-of-type(3),
-.route-transition.route-enter .services-page > section:not(.services-hero):nth-of-type(3),
-.route-transition.route-enter .faq > section:not(.faq-hero):nth-of-type(3),
-.route-transition.route-enter .contact-page > section:not(.contact-hero):nth-of-type(3) {
-  animation: contentReveal 360ms cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation: contentReveal 220ms ease-out both;
 }
 
 a {
   color: inherit;
   text-decoration: none;
   transition: color 200ms ease;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid rgba(47, 125, 79, 0.55);
+  outline-offset: 2px;
 }
 
 button {
@@ -130,27 +135,16 @@ p {
 
 .section-tag {
   display: inline-block;
-  padding: 0.5rem 0.95rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  background: #f5f5f5;
-  color: #2f7d4f;
-  margin-bottom: 0.8rem;
-}
-
-.section-tag {
-  display: inline-block;
   font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--accent-dark);
-  background: #f5f5f5;
+  background: #eef4ee;
+  border: 1px solid rgba(47, 125, 79, 0.14);
   border-radius: 999px;
-  padding: 0.35rem 0.75rem;
+  padding: 0.38rem 0.8rem;
+  margin-bottom: 0.8rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -194,11 +188,9 @@ p {
 @keyframes contentReveal {
   from {
     opacity: 0;
-    transform: translateY(10px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 

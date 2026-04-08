@@ -71,9 +71,9 @@
 }
 
 .faq-item {
-  background: #ffffff;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdfb 100%);
   border: 1.2px solid rgba(47, 125, 79, 0.12);
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
   transition: box-shadow 220ms ease, border-color 220ms ease;
 }
@@ -148,8 +148,8 @@
 }
 
 .faq-cta-inner {
-  background: #ffffff;
-  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdfb 100%);
+  border-radius: 18px;
   border: 1.2px solid rgba(47, 125, 79, 0.12);
   padding: 2rem 1.6rem;
   text-align: center;

@@ -10,12 +10,16 @@ export default function PublicLayout() {
 
   useEffect(() => {
     if (location.pathname !== displayLocation.pathname) {
-      setTransitionStage('exit');
-      const timer = setTimeout(() => {
-        setDisplayLocation(location);
-        setTransitionStage('enter');
-      }, 150);
-      return () => clearTimeout(timer);
+      setDisplayLocation(location);
+      setTransitionStage('enter');
+
+      const settleTimer = setTimeout(() => {
+        setTransitionStage('idle');
+      }, 260);
+
+      return () => {
+        clearTimeout(settleTimer);
+      };
     }
   }, [location, displayLocation]);
 

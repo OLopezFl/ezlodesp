@@ -15,10 +15,12 @@
   display: flex;
   width: 100%;
   max-width: 420px;
-  background: #ffffff;
-  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(47, 125, 79, 0.08);
+  box-shadow: 0 14px 42px rgba(11, 29, 18, 0.2);
+  backdrop-filter: blur(6px);
 }
 
 .login-card {
