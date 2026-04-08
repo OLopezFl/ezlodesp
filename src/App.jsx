@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import PublicLayout from './components/layout/PublicLayout';
 import Home from './pages/public/Home';
 import Services from './pages/public/Services';
@@ -8,7 +8,7 @@ import Login from './pages/public/Login';
 
 export default function App() {
   return (
-    <Router basename={import.meta.env.BASE_URL}>
+    <Router>
       <Routes>
         <Route element={<PublicLayout />}>
           <Route path="/" element={<Home />} />
