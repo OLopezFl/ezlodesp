@@ -244,7 +244,13 @@
   }
 
   .header.scrolled .nav a {
-    color: #f8fafc;
+    color: #334155;
+    text-shadow: none;
+  }
+
+  .header.scrolled .nav a:hover {
+    color: #0f2d1a;
+    border-bottom-color: rgba(47, 125, 79, 0.62);
   }
 
   .header-actions {
@@ -268,8 +274,15 @@
   }
 
   .header.scrolled .login-link {
+    color: #1f5233;
+    background: rgba(47, 125, 79, 0.12);
+    text-shadow: none;
+  }
+
+  .header.scrolled .work-cta {
+    background: #2f7d4f;
     color: #ffffff;
-    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(47, 125, 79, 0.35);
   }
 }
 
