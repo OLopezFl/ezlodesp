@@ -6,6 +6,7 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const logoSrc = `${import.meta.env.BASE_URL}images/logo.png`;
 
   useEffect(() => {
     const onScroll = () => {
@@ -36,7 +37,7 @@ export default function Header() {
     <header className={`header${isScrolled ? ' scrolled' : ''}`}>
       <div className="header-container">
         <div className="logo-section">
-          <img src="/images/logo.png" alt="Ezlo Limpiezas" className="header-logo" />
+          <img src={logoSrc} alt="Ezlo Limpiezas" className="header-logo" />
         </div>
         <button
           type="button"

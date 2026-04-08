@@ -5,6 +5,7 @@ import './Login.css';
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const logoSrc = `${import.meta.env.BASE_URL}images/logo.png`;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,7 +18,7 @@ export default function Login() {
       <div className="login-container">
         <div className="login-card">
           <div className="login-header">
-            <img src="/images/logo.png" alt="Ezlo Limpiezas" className="login-logo" />
+            <img src={logoSrc} alt="Ezlo Limpiezas" className="login-logo" />
             <h1>Acceder</h1>
             <p>Ingresa tu correo y contraseña para continuar</p>
           </div>

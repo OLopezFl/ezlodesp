@@ -7,7 +7,7 @@
   align-items: center;
   background: 
     linear-gradient(135deg, rgba(47, 125, 79, 0.92) 0%, rgba(15, 45, 26, 0.88) 100%),
-    url('/images/cubes-bg.jpg') center center / cover no-repeat;
+    var(--img-cubes) center center / cover no-repeat;
   padding: 2rem;
 }
 

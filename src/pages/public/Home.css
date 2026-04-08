@@ -12,7 +12,7 @@
   min-height: 620px;
   background:
     linear-gradient(110deg, rgba(6, 16, 10, 0.74) 0%, rgba(8, 21, 13, 0.62) 55%, rgba(8, 21, 13, 0.78) 100%),
-    url('/images/lobby-main.jpg') center center / cover no-repeat;
+    var(--img-lobby) center center / cover no-repeat;
   margin-top: 0;
   padding: calc(5.4rem + 76px) 0 4.2rem;
   overflow: hidden;

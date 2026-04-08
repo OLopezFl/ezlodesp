@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 
 export default function Home() {
+  const logoSrc = `${import.meta.env.BASE_URL}images/logo.png`;
+
   return (
     <div className="home">
       <section className="hero-section">
@@ -22,7 +24,7 @@ export default function Home() {
               </div>
             </div>
             <div className="hero-image">
-              <img src="/images/logo.png" alt="Logo principal" className="hero-main-image" />
+              <img src={logoSrc} alt="Logo principal" className="hero-main-image" />
             </div>
           </div>
         </div>

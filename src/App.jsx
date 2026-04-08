@@ -8,7 +8,7 @@ import Login from './pages/public/Login';
 
 export default function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route element={<PublicLayout />}>
           <Route path="/" element={<Home />} />
