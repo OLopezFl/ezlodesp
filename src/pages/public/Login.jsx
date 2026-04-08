@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ASSETS } from '../../config/assets';
+import { ROUTES } from '../../config/routes';
 import './Login.css';
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const logoSrc = `${import.meta.env.BASE_URL}images/logo.png`;
+  const logoSrc = ASSETS.LOGO;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -61,7 +63,7 @@ export default function Login() {
       </div>
 
       <div className="login-back-link">
-        <Link to="/">← Volver a inicio</Link>
+        <Link to={ROUTES.HOME}>← Volver a inicio</Link>
       </div>
     </div>
   );

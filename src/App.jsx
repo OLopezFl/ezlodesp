@@ -1,5 +1,6 @@
 import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import PublicLayout from './components/layout/PublicLayout';
+import { ROUTES } from './config/routes';
 import Home from './pages/public/Home';
 import Services from './pages/public/Services';
 import Contact from './pages/public/Contact';
@@ -11,13 +12,13 @@ export default function App() {
     <Router>
       <Routes>
         <Route element={<PublicLayout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/servicios" element={<Services />} />
-          <Route path="/contacto" element={<Contact />} />
-          <Route path="/faq" element={<FAQ />} />
+          <Route path={ROUTES.HOME} element={<Home />} />
+          <Route path={ROUTES.SERVICES} element={<Services />} />
+          <Route path={ROUTES.CONTACT} element={<Contact />} />
+          <Route path={ROUTES.FAQ} element={<FAQ />} />
         </Route>
-        <Route path="/login" element={<Login />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path={ROUTES.LOGIN} element={<Login />} />
+        <Route path="*" element={<Navigate to={ROUTES.HOME} replace />} />
       </Routes>
     </Router>
   );

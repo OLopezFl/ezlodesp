@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { ASSETS } from '../../config/assets';
+import { HEADER_NAV_LINKS, ROUTES } from '../../config/routes';
 import './Header.css';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-  const logoSrc = `${import.meta.env.BASE_URL}images/logo.png`;
+  const logoSrc = ASSETS.LOGO;
 
   useEffect(() => {
     const onScroll = () => {
@@ -51,14 +53,15 @@ export default function Header() {
           <span />
         </button>
         <nav className={`nav${menuOpen ? ' open' : ''}`}>
-          <Link to="/" onClick={() => setMenuOpen(false)}>Inicio</Link>
-          <Link to="/servicios" onClick={() => setMenuOpen(false)}>Servicios</Link>
-          <Link to="/faq" onClick={() => setMenuOpen(false)}>Preguntas frecuentes</Link>
-          <Link to="/contacto" onClick={() => setMenuOpen(false)}>Contacto</Link>
+          {HEADER_NAV_LINKS.map((link) => (
+            <Link key={link.to} to={link.to} onClick={() => setMenuOpen(false)}>
+              {link.label}
+            </Link>
+          ))}
         </nav>
         <div className={`header-actions${menuOpen ? ' open' : ''}`}>
-          <Link to="/login" className="login-link" onClick={() => setMenuOpen(false)}>Acceder</Link>
-          <Link to="/contacto" className="work-cta" onClick={() => setMenuOpen(false)}>Presupuesto</Link>
+          <Link to={ROUTES.LOGIN} className="login-link" onClick={() => setMenuOpen(false)}>Acceder</Link>
+          <Link to={ROUTES.CONTACT} className="work-cta" onClick={() => setMenuOpen(false)}>Presupuesto</Link>
         </div>
       </div>
     </header>

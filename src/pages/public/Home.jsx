@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
+import { ASSETS } from '../../config/assets';
+import { ROUTES } from '../../config/routes';
 import './Home.css';
 
 export default function Home() {
-  const logoSrc = `${import.meta.env.BASE_URL}images/logo.png`;
+  const logoSrc = ASSETS.LOGO;
 
   return (
     <div className="home">
@@ -19,8 +21,8 @@ export default function Home() {
                 Cuidamos hogares, oficinas y comunidades con un equipo estable, procesos claros y resultados constantes.
               </p>
               <div className="hero-buttons">
-                <Link to="/contacto" className="btn btn-primary">Pedir presupuesto</Link>
-                <Link to="/servicios" className="btn btn-secondary">Ver servicios</Link>
+                <Link to={ROUTES.CONTACT} className="btn btn-primary">Pedir presupuesto</Link>
+                <Link to={ROUTES.SERVICES} className="btn btn-secondary">Ver servicios</Link>
               </div>
             </div>
             <div className="hero-image">
@@ -82,7 +84,7 @@ export default function Home() {
         <div className="container home-cta-inner">
           <h2>Cuéntanos qué necesitas y diseñamos tu plan</h2>
           <p>Presupuesto transparente, respuesta rápida y sin compromisos.</p>
-          <Link to="/contacto" className="btn btn-secondary">Solicitar presupuesto</Link>
+          <Link to={ROUTES.CONTACT} className="btn btn-secondary">Solicitar presupuesto</Link>
         </div>
       </section>
     </div>
