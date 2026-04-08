@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 
 export default function Home() {
-  const logoSrc = `${import.meta.env.BASE_URL}images/logo.png`;
+  const logoSrc = `${import.meta.env.BASE_URL}images/logob.png`;
 
   return (
     <div className="home">
